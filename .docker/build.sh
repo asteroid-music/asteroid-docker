@@ -3,5 +3,5 @@
 docker build \
 	. \
 	-t asteroid \
-	--no-cache \
-	--rm
+	#--no-cache \
+	#--rm
