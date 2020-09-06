@@ -1,6 +1,6 @@
 version: "3.8"
 
-# Docker compose file for testing production builds
+# Docker compose file for starting only the database environment for development
 
 services:
     mongodb:
@@ -25,16 +25,6 @@ services:
         depends_on:
             - mongodb
         restart: always
-
-    asteroid:
-        build: .
-        ports:
-            - 5000:5000
-        networks:
-            - asteroid
-        depends_on:
-            - mongodb
-
 
 networks:
     asteroid:
